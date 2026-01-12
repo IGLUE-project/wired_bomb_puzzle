@@ -1,0 +1,77 @@
+.temporizador{
+  position: absolute;
+  width: 55%;
+  height: 10%;
+  top: 16.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(8, 10, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3vw;
+}
+
+.temporizador-descubierto {
+  position: absolute;
+  width: 63%;
+  height: 10%;
+  top: 15%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  color: rgb(8, 10, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vw;
+}
+
+.digitos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  width: 100%;
+  height: 100%;
+  padding: 0% 5% 0% 5%;
+}
+
+.digit {
+  flex: 1; 
+  height: 100%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0% 1% 0% 1%;
+}
+
+.digit-0 { background-image: url("/images/numbers/0.png"); }
+.digit-1 { background-image: url("/images/numbers/1.png"); }
+.digit-2 { background-image: url("/images/numbers/2.png"); }
+.digit-3 { background-image: url("/images/numbers/3.png"); }
+.digit-4 { background-image: url("/images/numbers/4.png"); }
+.digit-5 { background-image: url("/images/numbers/5.png"); }
+.digit-6 { background-image: url("/images/numbers/6.png"); }
+.digit-7 { background-image: url("/images/numbers/7.png"); }
+.digit-8 { background-image: url("/images/numbers/8.png"); }
+.digit-9 { background-image: url("/images/numbers/9.png"); }
+
+.temporizador .colon {
+  font-size: 3vh;  
+  font-weight: bold;
+  font-family: monospace;
+  margin: 0% 0%;
+  transition: opacity 0.2s;
+  padding-bottom: 2%;
+  user-select: none;
+}
+
+.temporizador-descubierto .colon {
+  font-size: 6vh;  
+  font-weight: bold;
+  font-family: monospace;
+  margin: 0% 0%;
+  transition: opacity 0.2s;
+  padding-bottom: 2%;
+  user-select: none;
+}

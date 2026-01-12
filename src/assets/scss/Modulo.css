@@ -1,0 +1,56 @@
+.modulo-descubierto {
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 26%;  
+  height: 67%; 
+  transform: translateY(7%);
+}
+
+.modulo {
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 14%;  
+  height: 30%; 
+}
+
+.luz-roj-principal,.luz-apa-principal,.luz-ver-principal ,.luz-roj,.luz-apa,.luz-ver  {
+  position: absolute;
+  width: 12%; 
+  height: 12%; 
+  background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+  background-position: center;
+	background-repeat: no-repeat;
+	right: 45%;
+  top: -14%;
+}
+
+.luz-roj, .luz-roj-principal{
+  background-image: url("./images/bomb/red_light.png");
+}
+
+.luz-apa, .luz-apa-principal{
+  background-image: url("./images/bomb/off_light.png");
+}
+
+.luz-ver, .luz-ver-principal{
+  background-image: url("./images/bomb/green_light.png");
+}
+
+.tapa-container{
+  position: absolute;
+  width: 90%;
+  height:54%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  pointer-events: all;
+  z-index: 999;
+}

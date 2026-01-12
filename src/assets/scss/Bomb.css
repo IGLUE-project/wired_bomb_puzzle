@@ -1,0 +1,125 @@
+.bomba-principal {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width : 100%;
+  height: 100%;
+  background-image: url("./images/bomb/bomb_main.png");
+}
+
+.bomba-modulo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+  justify-content: center;
+  position: relative;
+  width : 100%;
+  height: 100%;
+  background-image: url("./images/bomb/bomb_zoom.png");
+}
+
+/* === ZONAS CLICKABLES INVISIBLES A LOS LATERALES === */
+
+.bomba-modulo-back-izq,
+.bomba-modulo-back-der {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 30%;       
+  cursor: pointer;
+  z-index: 2;       
+  background: transparent;
+  pointer-events: auto;
+  cursor: url('./images/bomb/back.png'), auto;
+}
+
+/* Zona izquierda */
+.bomba-modulo-back-izq {
+  left: 0;
+}
+
+/* Zona derecha */
+.bomba-modulo-back-der {
+  right: 0;
+}
+
+.bomba-modulo > *:not(.bomba-modulo-back-izq):not(.bomba-modulo-back-der) {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.button-container-modulo { 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: absolute;
+  width: auto;
+  height: 7%;
+  top: 2%;
+  transform: translateY(-100%);
+  border-radius: 10%;
+}
+  
+.button-container-principal { 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    width: auto;
+    height: 3%;
+    transform: translateY(342%);
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 10%;
+    top: 52%;
+    filter: blur(1px);
+  }
+
+.button-modulo {
+  width: auto;
+  height: 100%;
+  padding: 0% 20% 0% 20%;
+  background-image: url("./images/bomb/reset_button.png");
+  background-size: 100% 100%;
+  background-position: center;
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-modulo:active {
+  background-image: url("./images/bomb/reset_button_clicked.png");
+  transform: scale(0.98);
+}
+
+.button-modulo p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2.5vmin;
+  font-weight: 600;
+  user-select: none;
+}
+
+.button-container-principal .button-modulo {
+  padding: 0% 20% 0% 20%;
+}
+
+.button-container-principal .button-modulo p {
+  font-size: 1.4vmin;
+}
+
+button:hover {
+    background-color: darkred;
+    border-color: white;
+}

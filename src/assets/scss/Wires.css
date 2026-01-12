@@ -1,0 +1,142 @@
+.cable-red, .cable-black, .cable-grey, .cable-orange, .cable-blue,
+.cable-yellow, .cable-green, .cable-pink,
+.cable-cor-pink, .cable-cor-orange, .cable-cor-grey, .cable-cor-black,
+.cable-cor-red, .cable-cor-blue, .cable-cor-yellow, .cable-cor-green,
+.cable-resp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex: 1;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: url('./images/wires/cut_icon.png'), auto;
+    pointer-events: all;
+    z-index: 1;
+}
+
+.cable-cor-red    { background-image: url("./images/wires/wire_red_cut.png"); }
+.cable-cor-blue   { background-image: url("./images/wires/wire_blue_cut.png"); }
+.cable-cor-yellow { background-image: url("./images/wires/wire_yellow_cut.png"); }
+.cable-cor-green  { background-image: url("./images/wires/wire_green_cut.png"); }
+.cable-cor-black  { background-image: url("./images/wires/wire_black_cut.png"); }
+.cable-cor-pink   { background-image: url("./images/wires/wire_pink_cut.png"); }
+.cable-cor-orange { background-image: url("./images/wires/wire_orange_cut.png"); }
+.cable-cor-grey   { background-image: url("./images/wires/wire_gray_cut.png"); }
+
+.cable-red    { background-image: url("./images/wires/wire_red.png"); }
+.cable-blue   { background-image: url("./images/wires/wire_blue.png"); }
+.cable-black  { background-image: url("./images/wires/wire_black.png"); }
+.cable-pink   { background-image: url("./images/wires/wire_pink.png"); }
+.cable-orange { background-image: url("./images/wires/wire_orange.png"); }
+.cable-grey   { background-image: url("./images/wires/wire_gray.png"); }
+.cable-yellow { background-image: url("./images/wires/wire_yellow.png"); }
+.cable-green  { background-image: url("./images/wires/wire_green.png"); }
+
+.cables-container-superpuesto {
+  position: relative;        
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+}
+
+.modulo-centro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    position: relative;
+    width: 92%;
+    height: 53%;
+}
+
+.cables-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cables-container-tapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+.tapa-superpuesta {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 79%;
+    height: 139%;
+    z-index: 10;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/bomb/lid.png");
+    cursor: pointer;
+}
+
+.tapa-fall {
+    animation: fall 2s ease-in-out forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(200px);
+        opacity: 0.5; 
+    }
+}
+
+@keyframes glow {
+  0% {box-shadow: 0 0 4px 2px rgba(255, 255, 0, 0.4);
+  }
+  50% {box-shadow: 0 0 12px 6px rgba(255, 255, 0, 0.9);
+  }
+  100% {box-shadow: 0 0 4px 2px rgba(255, 255, 0, 0.4);
+  }
+}
+
+.cable-red:hover,
+.cable-blue:hover,
+.cable-yellow:hover,
+.cable-green:hover,
+.cable-pink:hover,
+.cable-orange:hover,
+.cable-grey:hover,
+.cable-black:hover,
+.cable-cor-red:hover,
+.cable-cor-blue:hover,
+.cable-cor-yellow:hover,
+.cable-cor-green:hover,
+.cable-cor-pink:hover,
+.cable-cor-grey:hover,
+.cable-cor-orange:hover,
+.cable-cor-black:hover,
+.cable-resp:hover {
+    outline: 1px solid yellow;
+    animation: glow 1s infinite;
+    border-radius: 8px;
+}
