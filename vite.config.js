@@ -8,7 +8,7 @@ export default defineConfig(async ({ mode }) => {
     if (mode === "development") {
       _ESCAPP_APP_SETTINGS = await import("./config.js").then((mod) => mod.ESCAPP_APP_SETTINGS);
     }
-  } catch (e) { }
+  } catch(e){}
 
   return {
     base: './',

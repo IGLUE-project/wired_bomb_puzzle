@@ -33,15 +33,15 @@
 }
 
 .luz-roj, .luz-roj-principal{
-  background-image: url("./images/bomb/red_light.png");
+  background-image: url("/images/bomb/red_light.png");
 }
 
 .luz-apa, .luz-apa-principal{
-  background-image: url("./images/bomb/off_light.png");
+  background-image: url("/images/bomb/off_light.png");
 }
 
 .luz-ver, .luz-ver-principal{
-  background-image: url("./images/bomb/green_light.png");
+  background-image: url("/images/bomb/green_light.png");
 }
 
 .tapa-container{

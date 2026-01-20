@@ -124,17 +124,24 @@ export default function App() {
             let puzzleSolved = (escapp.getAllPuzzlesSolved() && (escapp.getSolvedPuzzles().length > 0));
             let deactivatedBomb = (puzzleSolved && appSettings.loadDeactivatedBombBoolean);
             if((appSettings.timer_enabled)&&(deactivatedBomb === false)){
-              // 1. Calculate endTime
-              const endTime = new Date(new Date(erState.startTime).getTime() + erState.duration * 1000);
-              // const endTime = new Date(new Date(erState.startTime).getTime()); //For testing time run out
+              try {
+                // 1. Calculate endTime
+                const endTime = new Date(new Date(erState.startTime).getTime() + erState.duration * 1000);
+                // const endTime = new Date(new Date(erState.startTime).getTime()); //For testing time run out
 
-              // 2. Calculate remaining time
-              const now = new Date();
-              const remainingMs = Math.max(endTime - now, 0); //diff in ms
-              const remainingSeconds = Math.floor(remainingMs / 1000);
-              const remainingMinutes = Math.floor(remainingSeconds / 60);
-              Utils.log("remainingSeconds:", remainingSeconds);
-              setTime(remainingSeconds);
+                // 2. Calculate remaining time
+                const now = new Date();
+                const remainingMs = Math.max(endTime - now, 0); //diff in ms
+                const remainingSeconds = Math.floor(remainingMs / 1000);
+                const remainingMinutes = Math.floor(remainingSeconds / 60);
+                Utils.log("remainingSeconds:", remainingSeconds);
+                setTime(remainingSeconds);
+              } catch(error){
+                if(escapp.isPreviewMode()){
+                  const remainingSecondsDefault = 1*60*60 - 1;
+                  setTime(remainingSecondsDefault);
+                }
+              }
             }
 
             setDeactivatedBomb(deactivatedBomb);

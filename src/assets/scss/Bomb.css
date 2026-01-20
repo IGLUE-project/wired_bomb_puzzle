@@ -9,7 +9,7 @@
   position: relative;
   width : 100%;
   height: 100%;
-  background-image: url("./images/bomb/bomb_main.png");
+  background-image: url("/images/bomb/bomb_main.png");
 }
 
 .bomba-modulo {
@@ -23,7 +23,7 @@
   position: relative;
   width : 100%;
   height: 100%;
-  background-image: url("./images/bomb/bomb_zoom.png");
+  background-image: url("/images/bomb/bomb_zoom.png");
 }
 
 /* === ZONAS CLICKABLES INVISIBLES A LOS LATERALES === */
@@ -38,7 +38,7 @@
   z-index: 2;       
   background: transparent;
   pointer-events: auto;
-  cursor: url('./images/bomb/back.png'), auto;
+  cursor: url('/images/bomb/back.png'), auto;
 }
 
 /* Zona izquierda */
@@ -87,7 +87,7 @@
   width: auto;
   height: 100%;
   padding: 0% 20% 0% 20%;
-  background-image: url("./images/bomb/reset_button.png");
+  background-image: url("/images/bomb/reset_button.png");
   background-size: 100% 100%;
   background-position: center;
   border: none;
@@ -100,7 +100,7 @@
 }
 
 .button-modulo:active {
-  background-image: url("./images/bomb/reset_button_clicked.png");
+  background-image: url("/images/bomb/reset_button_clicked.png");
   transform: scale(0.98);
 }
 
