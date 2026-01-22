@@ -17,7 +17,7 @@ function Modulo({setSolution, deactivatedBomb, resuelto, setResuelto, fallado, s
 
   return (
     <div className={descubierto ? "modulo-descubierto": "modulo" }>
-      <div className={fallado ? `luz-roj${descubierto ? "" : "-principal"}` : resuelto ? `luz-ver${descubierto ? "" : "-principal"}` : `luz-apa${descubierto ? "" : "-principal"}`}/>
+      <div className={fallado ? `light lightFailure` : resuelto ? `light lightSuccess` : `light lightOff`}/>
       {appSettings.timer_enabled && (typeof time === "number") && <Temporizador inicialSegundos={time} resuelto={resuelto} setFallado={setFallado} fallado={fallado} reinicio={reinicio} descubierto={descubierto}/>}
       <Wires resuelto={resuelto} deactivatedBomb={deactivatedBomb} fallado={fallado} reinicio={reinicio} setSolution={setSolution} setDescubierto={setDescubierto} descubierto={descubierto}/>
     </div>

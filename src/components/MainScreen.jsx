@@ -7,6 +7,7 @@ const MainScreen = (props) => {
   const { escapp, appSettings, Utils, I18n } = useContext(GlobalContext);
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
+  const [boxMode, setBoxMode] = useState(false);
 
   useEffect(() => {
     handleResize();
@@ -17,13 +18,19 @@ const MainScreen = (props) => {
       return;
     }
 
-    let aspectRatio = 16 / 9;
-    let _appContentWidth = Math.min(props.appHeight * aspectRatio, props.appWidth);
-    let _appContentHeight = _appContentWidth / aspectRatio;
+    let contentAspectRatio;
+    let appAspectRatio = props.appWidth / props.appHeight;
+    if(appAspectRatio < (16 / 9*0.99)){
+      //Enable box mode
+      contentAspectRatio = 4 / 3;
+      setBoxMode(true);
+    } else {
+      contentAspectRatio = 16 / 9;
+      setBoxMode(false);
+    }
 
-    let _containerWidth = _appContentWidth * 1;
-    let _containerHeight = _appContentHeight * 1;
-
+    let _containerWidth = Math.min(props.appHeight * contentAspectRatio, props.appWidth);
+    let _containerHeight = _containerWidth / contentAspectRatio;
     setContainerWidth(_containerWidth);
     setContainerHeight(_containerHeight);
   }
@@ -40,7 +47,7 @@ const MainScreen = (props) => {
 
   return (
     <div id="screen_main" className="screen_content" style={backgroundStyle}>
-      <div id="bomb" style={{ width: containerWidth, height: containerHeight }}>
+      <div id="bomb" className={boxMode ? "boxModeEnabled" : "boxModeDisabled"} style={{ width: containerWidth, height: containerHeight }}>
         <Bomb deactivatedBomb={props.deactivatedBomb} time={props.time} />
       </div>
     </div>

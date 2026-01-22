@@ -23,7 +23,15 @@
   position: relative;
   width : 100%;
   height: 100%;
-  background-image: url("/images/bomb/bomb_zoom.png");
+
+}
+
+div.boxModeEnabled .bomba-modulo {
+  background-image: url("/images/bomb/bomb_zoom_box.png");
+}
+
+div.boxModeDisabled .bomba-modulo {
+  background-image: url("/images/bomb/bomb_zoom_16-9.png");
 }
 
 /* === ZONAS CLICKABLES INVISIBLES A LOS LATERALES === */

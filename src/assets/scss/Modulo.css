@@ -19,28 +19,35 @@
   height: 30%; 
 }
 
-.luz-roj-principal,.luz-apa-principal,.luz-ver-principal ,.luz-roj,.luz-apa,.luz-ver  {
+.light {
   position: absolute;
   width: 12%; 
   height: 12%; 
   background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
-	background-repeat: no-repeat;
-	right: 45%;
+  background-repeat: no-repeat;
+  right: 45%;
   top: -14%;
 }
 
-.luz-roj, .luz-roj-principal{
-  background-image: url("/images/bomb/red_light.png");
+div.boxModeEnabled .light {
+  width: 15%;
+  height: 15%;
+  right: 44%;
+  top: -15.5%;
 }
 
-.luz-apa, .luz-apa-principal{
+.lightOff{
   background-image: url("/images/bomb/off_light.png");
 }
 
-.luz-ver, .luz-ver-principal{
+.lightFailure{
+  background-image: url("/images/bomb/red_light.png");
+}
+
+.lightSuccess{
   background-image: url("/images/bomb/green_light.png");
 }
 

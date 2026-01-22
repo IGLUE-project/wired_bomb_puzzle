@@ -1,8 +1,4 @@
-.cable-red, .cable-black, .cable-grey, .cable-orange, .cable-blue,
-.cable-yellow, .cable-green, .cable-pink,
-.cable-cor-pink, .cable-cor-orange, .cable-cor-grey, .cable-cor-black,
-.cable-cor-red, .cable-cor-blue, .cable-cor-yellow, .cable-cor-green,
-.cable-resp {
+.cable {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +10,10 @@
     cursor: url('/images/wires/cut_icon.png'), auto;
     pointer-events: all;
     z-index: 1;
+}
+
+div.boxModeEnabled .cable {
+  width: 100%;
 }
 
 .cable-cor-red    { background-image: url("/images/wires/wire_red_cut.png"); }
@@ -93,6 +93,11 @@
     background-repeat: no-repeat;
     background-image: url("/images/bomb/lid.png");
     cursor: pointer;
+}
+
+div.boxModeEnabled .tapa-superpuesta {
+  left: -1%;
+  width: 100%;
 }
 
 .tapa-fall {

@@ -12,6 +12,13 @@
   border-radius: 0.3vw;
 }
 
+div.boxModeEnabled .temporizador {
+  width: 73%;
+  height: 19%;
+  top: 17%;
+  left: 50%;
+}
+
 .temporizador-descubierto {
   position: absolute;
   width: 63%;
@@ -24,6 +31,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.5vw;
+}
+
+div.boxModeEnabled .temporizador-descubierto {
+  width: 84%;
+  height: 16%;
 }
 
 .digitos-container {
@@ -57,7 +69,7 @@
 .digit-9 { background-image: url("/images/numbers/9.png"); }
 
 .temporizador .colon {
-  font-size: 3vh;  
+  font-size: 3vmin;  
   font-weight: bold;
   font-family: monospace;
   margin: 0% 0%;
@@ -67,7 +79,7 @@
 }
 
 .temporizador-descubierto .colon {
-  font-size: 6vh;  
+  font-size: 5vmin;
   font-weight: bold;
   font-family: monospace;
   margin: 0% 0%;
