@@ -75,7 +75,7 @@ div.boxModeEnabled .cable {
     align-items: center;
     top: 5%;
     position: absolute;
-    width: 100%;
+    width: 87%;
     height: 110%;
     filter: blur(1px);
     pointer-events: none;
